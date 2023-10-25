@@ -20,7 +20,7 @@
     function displayRandomQuote() {
         const quoteContainer = document.getElementById("quote-container");
         const randomQuote = getRandomQuote();
-        quoteContainer.textContent = randomQuote;
+        quoteContainer.innerHTML = randomQuote;
         randomQuote.style.fontStyle = "italic";
         randomQuote.style.margin = "20px 0";
     }
