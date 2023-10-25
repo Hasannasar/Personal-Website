@@ -10,7 +10,7 @@
         "“Forget the pain in your body! It’s not enough to just swing with all my might! I need a hundred times my strength!” - Tanjiro Kamado, Demon Slayer",
         "“Tatakae!” - Eren Yeager, Attack on Titan",
         "“Set your heart ablaze. Go beyond your limits!” - Kyojuro Rengoku, Demon Slayer: Mugen Train",
-        "“We all change. When you think about it, we’re all different people, all through our lives. And that’s okay, that’s good, you gotta keep moving, so long as you remember all the people that you used to be. I will not forget one line of this. Not one day. I swear. I will always remember when the Doctor was me.” - Eleven, Doctor Who",
+        "“We all change. When you think about it, we’re all different people, all through our lives.<br><br>" + "And that’s okay, that’s good, you gotta keep moving, so long as you remember all the people that you used to be.<br><br>" + "I will not forget one line of this. Not one day. I swear.<br><br>" + "I will always remember when the Doctor was me.” - Eleven, Doctor Who",
     ];
     
     function getRandomQuote() {
@@ -21,6 +21,8 @@
         const quoteContainer = document.getElementById("quote-container");
         const randomQuote = getRandomQuote();
         quoteContainer.textContent = randomQuote;
+        randomQuote.style.fontStyle = "italic";
+        randomQuote.style.margin = "20px 0";
     }
 
     window.addEventListener("load", displayRandomQuote);
@@ -39,6 +41,10 @@
         li {
             margin-left: 0;
         }
+        hr {
+        border: 1px solid #ccc;
+        margin: 20px 0;
+    }
     </style>
 </head>
 <body>
@@ -63,6 +69,8 @@
 
     <p>Feel free to holler, I love meeting new people.</p>
 
+    <hr>
+    
     <p id="quote-container"></p>
 </body>
 </html>
