@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html>
+<script>
+    const quotes = [
+        "“The thing about perfection is that it’s unknowable. It’s impossible, but it’s also right in front of us all the time. - Kevin Flynn, TRON: Legacy",
+        "“If you win, you live. If you lose, you die. If you don’t fight, you can’t win!” - Eren Yeager, Attack on Titan",
+        "“The decisions you make and the actions that follow are a reflection of who you are. You cannot hide from yourself.” - Samurai Jack",
+        "“Many things that seem threatening in the dark become welcoming when we shine light on them.” - Iroh, Avatar: The Last Airbender",
+        "“When you base your expectations only on what you see, you blind yourself to the possibilities of a new reality.” - Zaheer, The Legend of Korra",
+        "“Forget the pain in your body! It’s not enough to just swing with all my might! I need a hundred times my strength!” - Tanjiro Kamado, Demon Slayer",
+        "“Tatakae!” - Eren Yeager, Attack on Titan",
+        "“Set your heart ablaze. Go beyond your limits!” - Kyojuro Rengoku, Demon Slayer: Mugen Train",
+        "“We all change. When you think about it, we’re all different people, all through our lives. And that’s okay, that’s good, you gotta keep moving, so long as you remember all the people that you used to be. I will not forget one line of this. Not one day. I swear. I will always remember when the Doctor was me.” - Eleven, Doctor Who",
+    ];
+    
+    function getRandomQuote() {
+        return quotes[Math.floor(Math.random() * quotes.length)];
+    }
+
+    function displayRandomQuote() {
+        const quoteContainer = document.getElementById("quote-container");
+        const randomQuote = getRandomQuote();
+        quoteContainer.textContent = randomQuote;
+    }
+
+    window.addEventListener("load", displayRandomQuote);
+</script>
 <head>
     <title>Hasan's Site</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,9 +36,6 @@
         h1 {
             font-size: 24px;
         }
-        ul {
-            list-style: none;
-        }
         li {
             margin-left: 0;
         }
@@ -22,7 +44,7 @@
 <body>
     <h1>Hi, my name’s Hasan.</h1>
 
-    <p>I’m a software engineer that uses JS/TS and Python.</p>
+    <p>I’m a software engineer.</p>
 
     <p>I like to build cool things with cool people.</p>
 
@@ -40,5 +62,7 @@
     <p>hkatariwala at gmail dot com</p>
 
     <p>Feel free to holler, I love meeting new people.</p>
+
+    <p id="quote-container"></p>
 </body>
 </html>
